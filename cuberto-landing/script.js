@@ -15,8 +15,7 @@
         smallCircle.style.top = (y-5) +'px';
         smallCircle.style.left = (x-5) +'px';
         circle.style.top = (y - 100) +'px';
-        circle.style.left = (x -100) +'px';
-        detectText(circle,x,y);
+        circle.style.left = (x -100) +'px';  
     }
     function setBoundsforCursor(x,y){
         var coordinates = {
@@ -30,6 +29,7 @@
         if(x > coordinates.x && x < coordinates.x1 && y > coordinates.y && y < coordinates.y1){
             circle.style.transform ="scale(1)";
             smallCircle.style.transform ="scale(0)";
+            detectText(circle,x,y);
         }else{
             circle.style.transform ="scale(0)";
             smallCircle.style.transform ="scale(1)";
